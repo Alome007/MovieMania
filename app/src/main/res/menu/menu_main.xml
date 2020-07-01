@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuSearch"
+        android:icon="@drawable/ic_action_search"
+        android:orderInCategory="200"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuCheckUpdate"
+        android:orderInCategory="200"
+        android:title="@string/check_update" />
+
+    <item
+        android:id="@+id/menuShare"
+        android:orderInCategory="300"
+        android:title="@string/share_app" />
+
+    <item
+        android:id="@+id/menuPrivacy"
+        android:orderInCategory="400"
+        android:title="@string/privacy_policy" />
+
+    <item
+        android:id="@+id/menuRateUs"
+        android:orderInCategory="500"
+        android:title="@string/rate_flicks" />
+
+    <!--<item-->
+    <!--android:id="@+id/menuSetting"-->
+    <!--android:orderInCategory="500"-->
+    <!--android:title="@string/setting" />-->
+
+    <item
+        android:id="@+id/menuFollowUs"
+        android:orderInCategory="600"
+        android:title="@string/follow_us">
+
+        <menu>
+            <group>
+
+                <item
+                    android:id="@+id/subMenuFacebook"
+                    android:icon="@drawable/ic_action_facebook"
+                    android:title="@string/facebook" />
+
+                <!--<item-->
+                <!--android:id="@+id/subMenuGoogle"-->
+                <!--android:title="Google" />-->
+                <!--<item-->
+                    <!--android:id="@+id/subMenuInstagram"-->
+                    <!--android:title="Instagram" />-->
+
+                <item
+                    android:id="@+id/subMenuTwitter"
+                    android:icon="@drawable/ic_action_twitter"
+                    android:title="@string/twitter" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

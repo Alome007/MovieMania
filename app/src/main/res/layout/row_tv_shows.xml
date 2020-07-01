@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewMainTvShowsRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginEnd="@dimen/_12sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="13dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayoutChildTvShowsRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewThumbnailContainerTvShowsRow"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewThumbnailTvShowsRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/poster_thumbnail"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewTitleTvShowsRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Zootopia"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardViewThumbnailContainerTvShowsRow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewYearTvShowsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="2016"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitleTvShowsRow"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleTvShowsRow" />
+
+        <View
+            android:id="@+id/dividerTvShowsRow"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bottom_shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitleTvShowsRow"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYearTvShowsRow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewRatingIconTvShowsRow"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:contentDescription="@string/rating_pop_corn_icon"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitleTvShowsRow"
+            app:layout_constraintTop_toBottomOf="@+id/dividerTvShowsRow"
+            app:srcCompat="@drawable/ic_action_star"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewRatingTvShowsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="90%"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewRatingIconTvShowsRow"
+            app:layout_constraintStart_toEndOf="@+id/imageViewRatingIconTvShowsRow"
+            app:layout_constraintTop_toTopOf="@+id/imageViewRatingIconTvShowsRow" />
+
+        <TextView
+            android:id="@+id/textViewAudienceTvShowsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/ratings"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitleTvShowsRow"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewRatingIconTvShowsRow" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewVoteCountIconTvShowsRow"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:contentDescription="@string/rating_pop_corn_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewRatingIconTvShowsRow"
+            app:layout_constraintStart_toEndOf="@+id/textViewRatingTvShowsRow"
+            app:layout_constraintTop_toTopOf="@+id/imageViewRatingIconTvShowsRow"
+            app:srcCompat="@drawable/ic_action_popcorn" />
+
+        <TextView
+            android:id="@+id/textViewVotesTvShowsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="2000"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewVoteCountIconTvShowsRow"
+            app:layout_constraintStart_toEndOf="@+id/imageViewVoteCountIconTvShowsRow"
+            app:layout_constraintTop_toTopOf="@+id/imageViewVoteCountIconTvShowsRow" />
+
+        <TextView
+            android:id="@+id/textViewVotesCountTvShowsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vote_count"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewAudienceTvShowsRow"
+            app:layout_constraintStart_toStartOf="@+id/imageViewVoteCountIconTvShowsRow"
+            app:layout_constraintTop_toTopOf="@+id/textViewAudienceTvShowsRow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

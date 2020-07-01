@@ -1,0 +1,229 @@
+<resources>
+    <string name="app_name">Flicks</string>
+
+    <string name="facebook_app_id">356147598404031</string>
+    <string name="fb_login_protocol_scheme">fb356147598404031</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admob_id">ca-app-pub-3681093234891935~4759305888</string>
+    <!--<string name="testing_admob_id">ca-app-pub-2437026319136761~4737487139</string>-->
+    <string name="testing_admob_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_admob_id">ca-app-pub-3681093234891935/5520464032</string>
+    <!--<string name="banner_admob_id">ca-app-pub-2437026319136761/2551319251</string>-->
+    <string name="testing_banner_admob_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_admob_id">ca-app-pub-3681093234891935/1389647339</string>
+    <!--<string name="interstitial_admob_id">ca-app-pub-2437026319136761/6817867327</string>-->
+    <string name="testing_interstitial_admob_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--Main activity screen strings-->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="search">Search</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">Tv Shows</string>
+    <string name="celebrities">Celebrities</string>
+    <string name="genre">Genre</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="upcoming_movies">Upcoming Movies</string>
+    <string name="in_theater">Movies In Theater</string>
+    <string name="latest_movies">Latest Movies</string>
+    <string name="top_rated_tv_shows">Top Rated Tv Shows</string>
+    <string name="latest_tv_shows">Latest Tv Shows</string>
+    <string name="top_rated_celebrities">Top Rated Celebrities</string>
+    <string name="tv_shows_on_the_air">Tv Shows On Air</string>
+    <string name="tv_shows_on_the_air_today">Tv Shows Airing Today</string>
+    <string name="action">Action</string>
+    <string name="animated">Animated</string>
+    <string name="drama">Drama</string>
+    <string name="sceince_fiction">Science Fiction</string>
+    <string name="trending">Trending</string>
+    <string name="check_update">Check for Update</string>
+    <string name="share_app">Share Flicks</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="guest_user">Guest User</string>
+    <string name="discover">Discover</string>
+    <string name="setting">Setting</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="offline">Offline</string>
+    <string name="account">Account</string>
+    <string name="rate_flicks">Rate Flicks</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="sign_up_now_heading">Sign up now to enjoy more features</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="login">Login</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="my_profile">My Profile</string>
+    <string name="favorite_list">Favorites List</string>
+
+    <!--Upcoming movies fragment strings-->
+    <string name="could_not_get_upcoming_movies">Sorry, Could not get upcoming movies list.</string>
+    <string name="internet_problem">Connection problem.</string>
+    <string name="poster_thumbnail">Poster Image Thumbnail</string>
+    <string name="rating_pop_corn_icon">Rating pop corn icon image</string>
+    <string name="movie_rating">Movie Rating</string>
+    <string name="vote_count">Votes Count</string>
+    <string name="ratings">Ratings</string>
+
+    <!--Top rated celebrities strings-->
+    <string name="popularity">Popularity</string>
+    <string name="could_not_get_celebrities">Could not get celebrities.</string>
+
+    <!--Top rated tv shows fragment strings-->
+    <string name="could_not_get_top_rated_tv_shows">Sorry, Could not get top rated tv shows list.</string>
+
+    <!--Latest tv shows fragment strings-->
+    <string name="could_not_get__latest_tv_shows">Sorry, Could not get latest tv shows list.</string>
+
+    <!--Tv shows on air fragment strings-->
+    <string name="could_not_get_on_air_tv_shows">Sorry, Could not get on air tv shows list.</string>
+
+    <!--Tv shows airing today fragment strings-->
+    <string name="could_not_get_tv_shows_airing_today">Sorry, Could not get list of tv shows airing today.</string>
+
+    <!--Movies detail activity strings-->
+    <string-array name="movies_detail_array">
+        <item>DETAIL</item>
+        <item>GENRE</item>
+        <item>SIMILAR</item>
+        <item>SUGGESTED</item>
+    </string-array>
+    <string name="first_air_date">First Air Date</string>
+    <string name="similar_tv_shows">Similar Tv Shows</string>
+    <string name="recommended_tv_shows">Recommended Tv Shows</string>
+    <string name="seasons">Seasons</string>
+    <string name="tv_show_reviews">Tv Show Reviews</string>
+    <string name="watch_full_movie">Watch Full Movie</string>
+    <string name="videos">Videos</string>
+    <string name="images">Images</string>
+    <string name="production_companies">Production Companies</string>
+
+    <!--Movie detail fragment strings-->
+    <string name="original_title">Original Title</string>
+    <string name="overview">Overview</string>
+    <string name="homepage">Homepage</string>
+    <string name="budget_of_movie">Budget of Movie</string>
+    <string name="release_date">Release Date</string>
+    <string name="movie_revenue">Movie Revenue</string>
+    <string name="tag_line">Tag Line</string>
+    <string name="movie_status">Movie Status</string>
+    <string name="cast">The Cast</string>
+    <string name="crew">The Crew</string>
+    <string name="view_more">View more</string>
+    <string name="similar_movies">Similar Movies</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="story_line">Story line</string>
+    <string name="grade_now">Grade Now</string>
+    <string name="recommended_movies">Recommended Movies</string>
+
+    <!--Similar movies fragment strings-->
+    <string name="could_not_get_similar_movies">Sorry, Could not get similar movies list.</string>
+
+    <!--Suggested movies fragment strings-->
+    <string name="could_not_get_suggested_movies">Sorry, Could not get suggested movies list.</string>
+
+    <!--Celebrity movies activity strings-->
+    <string name="could_not_get_movies">Could not get movies.</string>
+
+    <!--Similar tv shows fragments strings-->
+    <string name="could_not_get_similar_tv_shows">Sorry, Could not get similar tv shows list.</string>
+
+    <!--Suggested tv shows fragment strings-->
+    <string name="could_not_get_suggested_tv_shows">Sorry, Could not get suggested tv shows list.</string>
+
+    <!--Search activity strings-->
+    <string name="_search">Search&#8230;</string>
+    <string-array name="search_tabs_array">
+        <item>MOVIES</item>
+        <item>TV SHOWS</item>
+        <item>CELEBRITIES</item>
+    </string-array>
+    <string name="could_not_search_movies">Sorry, Could not search movies.</string>
+    <string name="could_not_search_tv_shows">Sorry, Could not search tv shows.</string>
+    <string name="could_not_search_celebrities">Sorry, Could not search celebrities.</string>
+    <string name="no_movie_found">Sorry, No movie found.</string>
+    <string name="no_celebrity_found">Sorry, No celebrity found.</string>
+    <string name="no_tv_show_found">Sorry, No tv show found.</string>
+
+    <!--Tv seasons activity strings-->
+    <string name="episodes">Episodes</string>
+    <string name="photos">Photos</string>
+
+    <string name="new_version">New Version Available</string>
+    <string name="update_app">New features are waiting for you!</string>
+    <string name="update">Update Now</string>
+    <string name="later">Later</string>
+    <string name="movie_reviews">Movie Reviews</string>
+
+    <!--Trending fragment strings-->
+    <string-array name="trending_tabs_array">
+        <item>Movies</item>
+        <item>Tv Shows</item>
+        <item>Celebrities</item>
+    </string-array>
+    <string name="could_not_get_tv_shows">Could not get tv shows.</string>
+    <string name="retry"><u>Retry</u></string>
+    <string name="loading_more">Loading more&#8230;</string>
+
+    <!--Genre fragment strings-->
+    <string name="action_movies">Action Movies</string>
+    <string name="adventure_movies">Adventure Movies</string>
+    <string name="animated_movies">Animated Movies</string>
+    <string name="crime_movies">Crime Movies</string>
+    <string name="documentary_movies">Documentary Movies</string>
+    <string name="family_movies">Family Movies</string>
+    <string name="music_movies">Music Movies</string>
+    <string name="romantic_movies">Romantic Movies</string>
+    <string name="science_fiction_movies">Science Fiction Movies</string>
+    <string name="war_movies">War Movies</string>
+    <string name="horror_movies">Horror Movies</string>
+    <string name="thriller_movies">Thrill Movies</string>
+    <string name="comedy_movies">Comedy Movies</string>
+    <string name="adventure">Adventure</string>
+    <string name="crime">Crime</string>
+    <string name="documentary">Documentary</string>
+    <string name="family">Family</string>
+    <string name="musical">Musical</string>
+    <string name="romantic">Romantic</string>
+    <string name="science_fiction">Science Fiction</string>
+    <string name="war">War</string>
+    <string name="horror">Horror</string>
+    <string name="thrill">Thrill</string>
+    <string name="comedy">Comedy</string>
+    <string name="action_tv_shows">Action Tv Shows</string>
+    <string name="adventure_tv_shows">Adventure Tv Shows</string>
+    <string name="animated_tv_shows">Animated Tv Shows</string>
+    <string name="crime_tv_shows">Crime Tv Shows</string>
+    <string name="romantic_tv_shows">Romantic Tv Shows</string>
+    <string name="science_fiction_tv_shows">Science Fiction Tv Shows</string>
+    <string name="horror_tv_shows">Horror Tv Shows</string>
+    <string name="thriller_tv_shows">Thrill Tv Shows</string>
+    <string name="comedy_tv_shows">Comedy Tv Shows</string>
+
+    <!--Login activity strings-->
+    <string name="welcome">Welcome!</string>
+    <string name="login_your_account">Login to your account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="trying_to_login">Trying to log in&#8230;</string>
+    <string name="terms_services">By proceeding, you agree to our <u>Terms of Uses</u> &amp; <u>Privacy Policy</u></string>
+
+    <string name="view_all">View All</string>
+    <string name="watch_full_episode">Watch Full Episode</string>
+
+    <!--Favorite activity strings-->
+    <string-array name="favorite_string_array">
+        <item>Movies</item>
+        <item>Tv Shows</item>
+        <item>Celebrities</item>
+    </string-array>
+
+    <!--Setting activity strings-->
+    <string name="change_language">Change Language</string>
+
+    <string name="delete">Delete</string>
+
+</resources>

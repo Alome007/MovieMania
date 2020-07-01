@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.codebosses.flicks.utils.customviews.CustomNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollViewTvShowsDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/_12sdp"
+    tools:context=".activities.TvShowsDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutTvShowsDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.codebosses.flicks.utils.customviews.curve_image_view.CrescentoImageView
+            android:id="@+id/imageViewCoverTvShowsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:scaleType="centerCrop"
+            app:curvature="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tintAlpha="50"
+            app:tintColor="#FFFFFF"
+            app:tintModes="manual" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTvShowsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@null"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewUnFavoriteTvShowsDetail"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_action_bordered_heart"
+            app:tint="@color/colorWhite" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewFavoriteTvShowsDetail"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_action_solid_heart"
+            app:tint="@android:color/holo_red_light" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imageButtonPlayTvShowsDetail"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_white_circle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewCoverTvShowsDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_action_circle_play" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewThumbnailContainerTvShowsDetail"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:visibility="invisible"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircle="@+id/imageViewCoverTvShowsDetail"
+            app:layout_constraintCircleAngle="587"
+            app:layout_constraintCircleRadius="@dimen/_130sdp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewThumbnailTvShowsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/poster_thumbnail"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/textViewTitleTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toTopOf="@+id/cardViewThumbnailContainerTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewRatingTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitleTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewAudienceTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ratings"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/textViewRatingTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRatingTvShowsDetail" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/ratingBarTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:isIndicator="true"
+            android:rating="2"
+            android:saveEnabled="false"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewRatingTvShowsDetail"
+            app:layout_constraintStart_toEndOf="@+id/textViewRatingTvShowsDetail"
+            app:layout_constraintTop_toTopOf="@+id/textViewRatingTvShowsDetail"
+            app:mrb_fillBackgroundStars="true"
+            app:mrb_progressTint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/textViewVotesTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/grade_now"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewAudienceTvShowsDetail"
+            app:layout_constraintStart_toStartOf="@+id/ratingBarTvShowsDetail"
+            app:layout_constraintTop_toTopOf="@+id/textViewAudienceTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewReleaseDateHeaderTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@string/first_air_date"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewThumbnailContainerTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewYearTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewReleaseDateHeaderTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewStoryLineHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/story_line"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYearTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewOverviewTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewStoryLineHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewStoryLineHeader" />
+
+        <TextView
+            android:id="@+id/textViewGenreHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/genre"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOverviewTvShowsDetail" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewGenreTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewGenreHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGenreHeader" />
+
+        <TextView
+            android:id="@+id/textViewCompaniesHeaderTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/production_companies"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewGenreTvShowsDetail" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCompaniesTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewCompaniesHeaderTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCompaniesHeaderTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewVideosHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/videos"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewCompaniesTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewVideosCountTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewVideosHeader"
+            app:layout_constraintStart_toEndOf="@+id/textViewVideosHeader"
+            app:layout_constraintTop_toTopOf="@+id/textViewVideosHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewVideosTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewVideosHeader" />
+
+        <TextView
+            android:id="@+id/textViewImagesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/images"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewVideosTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewImagesCountTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewImagesHeader"
+            app:layout_constraintStart_toEndOf="@+id/textViewImagesHeader"
+            app:layout_constraintTop_toTopOf="@+id/textViewImagesHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewImagesTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewImagesHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewImagesHeader" />
+
+        <TextView
+            android:id="@+id/textViewCastHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/cast"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewImagesTvShowsDetail" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCastTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewCastHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCastHeader" />
+
+        <TextView
+            android:id="@+id/textViewCrewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/crew"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewCastTvShowsDetail" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCrewTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewCrewHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCrewHeader" />
+
+        <TextView
+            android:id="@+id/textViewSeasonsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/seasons"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewCrewTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewSeasonsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/seasons"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSeasonsHeader"
+            app:layout_constraintStart_toEndOf="@+id/textViewSeasonsHeader"
+            app:layout_constraintTop_toTopOf="@+id/textViewSeasonsHeader" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSeasonsTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewCrewHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSeasonsHeader" />
+
+        <TextView
+            android:id="@+id/textViewSimilarTvShowsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/similar_tv_shows"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewSeasonsTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewViewMoreSimilarTvShows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="@string/view_more"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSimilarTvShowsHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewSimilarTvShowsHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSimilarTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewSimilarTvShowsHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSimilarTvShowsHeader" />
+
+        <TextView
+            android:id="@+id/textViewSuggestionTvShowsHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/recommended_tv_shows"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewSimilarTvShowsDetail" />
+
+        <TextView
+            android:id="@+id/textViewViewMoreSuggestionTvShows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="@string/view_more"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSuggestionTvShowsHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewSuggestionTvShowsHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSuggestionTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewSuggestionTvShowsHeader"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSuggestionTvShowsHeader" />
+
+        <TextView
+            android:id="@+id/textViewViewReviewsHeaderTvShowsDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/tv_show_reviews"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cardViewThumbnailContainerTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewSuggestionTvShowsDetail" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReviewsTvShowsDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewViewReviewsHeaderTvShowsDetail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewViewReviewsHeaderTvShowsDetail" />
+
+        <com.budiyev.android.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBarTvShowsDetail"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_44sdp"
+            android:layout_marginTop="@dimen/_220sdp"
+            android:visibility="gone"
+            app:animateProgress="true"
+            app:foregroundStrokeCap="round"
+            app:foregroundStrokeColor="@color/colorAccent"
+            app:foregroundStrokeWidth="@dimen/_3sdp"
+            app:indeterminate="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:progressAnimationDuration="200"
+            app:startAngle="45" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.codebosses.flicks.utils.customviews.CustomNestedScrollView>
